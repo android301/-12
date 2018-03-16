@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:background="@drawable/grid_item_corner"
+    >
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/sort_fanxian"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@null"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:duplicateParentState="true"
+        android:textColor="@color/SlateGray"
+        android:textSize="12dp"
+        android:text="日历"/>
+</LinearLayout>

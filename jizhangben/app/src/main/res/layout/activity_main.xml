@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/Container"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#c4c6c5">
+    </View>
+
+
+
+    <com.example.zbq.jizhangben.ui.view.BaseBottomBar
+        android:id="@+id/main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:clipChildren="false">
+
+
+        <RelativeLayout
+            style="@style/tab_radiobutton_style"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableTop="@drawable/rb_main_first_selector"
+                android:paddingBottom="3dp"
+                android:paddingTop="6dp"
+                android:textColor="@drawable/tabbar_text_color"
+                android:text="@string/first_title"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/tab_radiobutton_style"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableTop="@drawable/rb_main_third_selector"
+                android:paddingBottom="3dp"
+                android:paddingTop="6dp"
+                android:textColor="@drawable/tabbar_text_color"
+                android:text="@string/third_title"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:gravity="bottom|center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:background="@null"
+            android:layout_gravity="bottom">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableTop="@drawable/rb_main_second_selector"
+                android:paddingBottom="3dp"
+                android:paddingTop="6dp"
+                android:textColor="@drawable/tabbar_text_color"
+                android:text="@string/second_title" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/tab_radiobutton_style"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableTop="@drawable/rb_main_four_selector"
+                android:paddingBottom="3dp"
+                android:paddingTop="6dp"
+                android:textColor="@drawable/tabbar_text_color"
+                android:text="發現" />
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            style="@style/tab_radiobutton_style"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableTop="@drawable/rb_main_four_selector"
+                android:paddingBottom="3dp"
+                android:paddingTop="6dp"
+                android:textColor="@drawable/tabbar_text_color"
+                android:text="@string/four_title" />
+
+
+        </RelativeLayout>
+
+
+    </com.example.zbq.jizhangben.ui.view.BaseBottomBar>
+
+</LinearLayout>

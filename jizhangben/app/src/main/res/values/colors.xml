@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="background">#f7f7f7</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="text_black3">#333333</color>
+    <color name="text_black6">#666666</color>
+    <color name="text_black9">#999999</color>
+
+    <color name="text_red">#FF4040</color>
+    <color name="red">#ff0000</color>
+    <color name="SlateGray">#708090</color>
+    <color name="PapayaWhip">#FFEFD5</color>
+    <color name="BlanchedAlmond">#FFEBCD</color>
+    <color name="NavajoWhite">#FFDEAD</color>
+    <color name="AntiqueWhite">#FAEBD7</color>
+    <color name="Tan">#D2B48C</color>
+    <color name="BurlyWood">#DEB887</color>
+    <color name="MediumOrchid">#BA55D3</color>
+
+    <color name="SlateBlue">#6A5ACD</color>
+    <color name="Indigo">#4B0082</color>
+    <color name="Blue"> #0000FF</color>
+    <color name="MidnightBlue"> #191970</color>
+    <color name="DarkBlue"> #00008B</color>
+    <color name="RoyalBlue">#4169E1</color>
+
+    <color name="black_33">#333333</color>
+    <color name="half_transparent_black">#BB000000</color>
+    <color name="light_black">#141414</color>
+    <color name="line_and_outline_grey">#d9d9d9</color>
+    <color name="title_transparent_black">#22000000</color>
+
+
+</resources>
