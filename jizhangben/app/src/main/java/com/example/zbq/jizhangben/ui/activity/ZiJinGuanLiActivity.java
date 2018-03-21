@@ -3,7 +3,8 @@ package com.example.zbq.jizhangben.ui.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -70,28 +71,35 @@ public class ZiJinGuanLiActivity extends AppCompatActivity {
     TextView itemXinyongkaMoney;
     @BindView(R.id.item_xinyongka_layout)
     RelativeLayout itemXinyongkaLayout;
+    @BindView(R.id.img_viewor)
+    ImageView imgViewor;
+    @BindView(R.id.tv)
+    TextView tv;
 
     private OutInMoneyDB outInMoneyDB;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zijinguanli);
         ButterKnife.bind(this);
-        outInMoneyDB=new OutInMoneyDB(this);
+        outInMoneyDB = new OutInMoneyDB(this);
         itemXianjinMoney.setText(String.valueOf(outInMoneyDB.getStyleTotal("现金")));
         itemZhifubaoMoney.setText(String.valueOf(outInMoneyDB.getStyleTotal("支付宝")));
         itemWeixinMoney.setText(String.valueOf(outInMoneyDB.getStyleTotal("微信")));
         itemChuxukaMoney.setText(String.valueOf(outInMoneyDB.getStyleTotal("储蓄卡")));
         itemXinyongkaMoney.setText(String.valueOf(outInMoneyDB.getStyleTotal("信用卡")));
-        float out=0,in=0;
-        out=outInMoneyDB.getOutTotal();
-        in=outInMoneyDB.getInTotal();
+        float out = 0, in = 0;
+        out = outInMoneyDB.getOutTotal();
+        in = outInMoneyDB.getInTotal();
         cashOut.setText(String.valueOf(out));
         cashIn.setText(String.valueOf(in));
-        tvJingzichan.setText(String.valueOf(in+out));
+        tvJingzichan.setText(String.valueOf(in + out));
     }
 
-    @OnClick({R.id.item_xianjin_layout, R.id.item_weixin_layout, R.id.item_zhifubao_layout, R.id.item_chuxuka_layout, R.id.item_xinyongka_layout})
+    @OnClick({R.id.item_xianjin_layout, R.id.item_weixin_layout,
+            R.id.item_zhifubao_layout, R.id.item_chuxuka_layout,
+            R.id.item_xinyongka_layout,R.id.img_viewor})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.item_xianjin_layout:
@@ -104,6 +112,46 @@ public class ZiJinGuanLiActivity extends AppCompatActivity {
                 break;
             case R.id.item_xinyongka_layout:
                 break;
+            case R.id.img_viewor:
+                setMoneyVisible();
+                break;
         }
     }
+    /**
+     * 设置金额是否可见
+     */
+    private boolean isPwdVisible=true;//默认可见
+    private void setMoneyVisible() {
+
+                //修改密码是否可见的状态
+                isPwdVisible = !isPwdVisible;
+                //設置密碼是否可見
+                if (isPwdVisible) {
+                    //设置密码为明文，并更改眼睛图标
+                    itemXinyongkaMoney.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    itemZhifubaoMoney.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    itemChuxukaMoney.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    itemWeixinMoney.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    itemXianjinMoney.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    tvJingzichan.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    cashIn.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    cashOut.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                    imgViewor.setImageResource(R.drawable.yanjing);
+                } else {
+                    //设置密码为暗文，并更改眼睛图标
+                    itemXinyongkaMoney.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    itemZhifubaoMoney.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    itemChuxukaMoney.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    itemWeixinMoney.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    itemXianjinMoney.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    tvJingzichan.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    cashIn.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    cashOut.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+                    imgViewor.setImageResource(R.drawable.biyanjing);
+                }
+
+    }
+
 }

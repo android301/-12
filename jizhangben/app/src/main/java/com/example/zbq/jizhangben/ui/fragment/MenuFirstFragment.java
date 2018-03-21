@@ -3,6 +3,7 @@ package com.example.zbq.jizhangben.ui.fragment;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.icu.text.SimpleDateFormat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
@@ -81,6 +82,14 @@ public class MenuFirstFragment extends BaseFragment implements View.OnClickListe
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_menu_first, null);
         layoutData.setOnClickListener(this);//点击弹出日期选择框
         rightBtn.setOnClickListener(this);
+
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy");
+        String year=sdf.format(new java.util.Date());
+        dataYear.setText(year);
+        SimpleDateFormat sdf2=new SimpleDateFormat("MM");
+        String month=sdf2.format(new java.util.Date());
+        dataMonth.setText(month);
+
 
         String detail=dataYear.getText()+"-"+dataMonth.getText();//"2018-01"格式
         outInMoneyDB = new OutInMoneyDB(getActivity());

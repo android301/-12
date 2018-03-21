@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:text="财经"
+        android:gravity="center_vertical"
+        />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_black6"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:text="国庆节前辞了工作，离开了呆了十二年的城市，回到了家乡，以后要为家乡建设做贡献啦！undefined 节前已搬家，也递交了入职资料"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="微微"
+            android:textColor="@color/SlateGray"/>
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_author"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:text="我家理财"
+            android:textColor="@color/SlateGray"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_source"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:text="2018-01-20"
+            android:textColor="@color/SlateGray"/>
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="100"
+            android:textColor="@color/text_red"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:src="@drawable/chakanrenshu"
+            android:layout_marginEnd="3dp"
+            android:layout_toLeftOf="@+id/tv_num"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

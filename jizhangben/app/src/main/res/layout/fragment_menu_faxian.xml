@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,8 +25,182 @@
             />
     </LinearLayout>
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiprl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/bt_yusuan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_marginStart="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_height="45dp"
+            android:background="@color/text_red"
+            android:layout_marginTop="40dp"
+            android:text="设置预算"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_yusuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="月预算"
+                    android:layout_toRightOf="@+id/tv_month"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/tv_bianjiyusuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="编辑预算"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="5dp"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <com.example.zbq.jizhangben.ui.view.CircleProgressBar
+                    android:id="@+id/cicle_pro_bar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+
+                    android_custom:roundColor="#D1D1D1"
+                    android_custom:roundProgressColor="@color/text_red"
+                    android_custom:textColor="@color/black"
+                    android_custom:textIsDisplayable="true"
+                    android_custom:roundWidth="6dip"
+                    android_custom:textSize="18sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剩余预算"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/tv_shengyu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/text_black6"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="本月预算"
+                            android:textColor="@color/text_black6"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/tv_yusuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1000"
+                            android:textColor="@color/text_black6"
+                            android:textSize="15sp"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="本月支出"
+                            android:textColor="@color/text_black6"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/tv_zhichu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_black6"
+                            android:textSize="15sp"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
     <GridView
+        android:visibility="gone"
         android:id="@+id/grid_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,4 +216,47 @@
 
     </GridView>
 
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_black6"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black6"
+            android:textSize="15sp"
+            android:text="精选"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_red"
+            android:textSize="15sp"
+            android:text="热点"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/ll_redian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/background">
+
+        </ListView>
+
+       </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

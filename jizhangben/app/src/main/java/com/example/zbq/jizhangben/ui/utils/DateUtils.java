@@ -206,6 +206,7 @@ public class DateUtils {
         res = simpleDateFormat.format(date);
         return res;
     }
+
     public static String stampToMonth(String s){
         String res;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
